@@ -22,7 +22,7 @@ namespace zqy {
 static const vector<String> instList({
      "scp41.r200c1000",
      "scp42.r200c1000",
-     /*"scp43.r200c1000",
+     "scp43.r200c1000",
      "scp44.r200c1000",
      "scp45.r200c1000",
      "scp46.r200c1000",
@@ -30,7 +30,31 @@ static const vector<String> instList({
      "scp48.r200c1000",
      "scp49.r200c1000",
      "scp410.r200c1000",
-     "scp51.r200c1000",*/
+     "scp51.r200c1000",
+     "scp52.r200c2000",
+     "scp53.r200c2000",
+     "scp54.r200c2000",
+     "scp55.r200c2000",
+     "scp56.r200c2000",
+     "scp57.r200c2000",
+     "scp58.r200c2000",
+     "scp59.r200c2000",
+     "scp510.r200c2000",
+     "scp61.r200c1000",
+     "scp62.r200c1000",
+     "scp63.r200c1000",
+     "scp64.r200c1000",
+     "scp65.r200c1000",
+     "scpa1.r300c3000",
+     "scpa2.r300c3000",
+     "scpa3.r300c3000",
+     "scpa4.r300c3000",
+     "scpa5.r300c3000",
+     "scpb1.r300c3000",
+     "scpb2.r300c3000",
+     "scpb3.r300c3000",
+     "scpb4.r300c3000",
+     "scpb5.r300c3000",
     });
 
 void Simulator::initDefaultEnvironment() {
@@ -232,30 +256,5 @@ void Simulator::convertScpInstance(const String &scpPath, int index) {
         << "c" << input.columnnum()  << ".json";
     save(path.str(), input);
 }
-//void Simulator::convertTspInstance(const String & tspName, int centerNum) {
-//    Log(Log::Info) << "converting " << tspName << " with " << centerNum << "centers." << endl;
-//
-//    ifstream ifs("Instance/tsp/" + tspName + ".tsp");
-//
-//    int nodeNum;
-//    ifs >> nodeNum;
-//
-//    Problem::Input input;
-//    input.set_centernum(centerNum);
-//
-//    auto &graph(*input.mutable_graph());
-//    graph.set_nodenum(nodeNum);
-//    for (int n = 0; n < nodeNum; ++n) {
-//        double i, x, y;
-//        ifs >> i >> x >> y;
-//        auto &node(*graph.add_nodes());
-//        node.set_x(x);
-//        node.set_y(y);
-//    }
-//
-//    ostringstream path;
-//    path << InstanceDir() << "tsp." << tspName << ".p" << input.centernum() << ".json";
-//    save(path.str(), input);
-//}
 
 }
